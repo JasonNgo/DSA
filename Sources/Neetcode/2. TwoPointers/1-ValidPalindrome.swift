@@ -8,6 +8,8 @@
 import Foundation
 
 /*
+ https://neetcode.io/problems/is-palindrome
+ 
  Given a string s, return true if it is a palindrome, otherwise return false.
 
  A palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.
@@ -21,6 +23,12 @@ import Foundation
  Output: false
  */
 
+
+/// Validates if the input string is a valid palindrome. By definition
+/// A palindrome is a string that reads the same forward and backward.
+/// It is also case-insensitive and ignores all non-alphanumeric characters.
+/// - Parameter string: The input string to be validated
+/// - Returns: True if the input string is a valid palindrome
 public func isValidPalindrome(_ string: String) -> Bool {
     let prunedString = string
         .lowercased()
