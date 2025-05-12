@@ -92,4 +92,62 @@ public struct TwoPointerTests {
         #expect(threeSum(nums) == expected)
     }
 
+    // MARK: - Container with most water
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput() {
+        let heights = [1,8,6,2,5,4,8,3,7]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 49)
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput2() {
+        let heights = [1, 1]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 1)
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput3() {
+        let heights = [5, 5, 5, 5, 5]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 5 * (5 - 1))
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput4() {
+        let heights = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 20)
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput5() {
+        let heights = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 20)
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput6() {
+        let heights = [0, 0, 0, 10, 0, 0]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 0)
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput7() {
+        let heights = [0, 0, 0, 0, 0]
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 0)
+    }
+
+    @Test
+    func testMaximumAreaOfContainerReturnsValidOutput8() {
+        let heights = Array(1...10_000)
+        let result = maximumAreaOfContainer(heights)
+        #expect(result == 9999)
+    }
+
 }
