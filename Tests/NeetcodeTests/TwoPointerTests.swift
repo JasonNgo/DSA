@@ -53,4 +53,43 @@ public struct TwoPointerTests {
         #expect(expected == twoIntegerSumII(array, 3))
     }
 
+    // MARK: - Three Sum
+
+    @Test
+    func testThreeSumReturnsValidOutput() {
+        let nums = [-1, 0, 1, 2, -1, -4]
+        let expected: Set<Set<Int>> = [ [-1, -1, 2], [-1, 0, 1] ].map { Set($0) }.reduce(into: Set<Set<Int>>()) { $0.insert($1) }
+        let result = Set(threeSum(nums).map { Set($0) })
+
+        #expect(result == expected)
+    }
+
+    @Test
+    func testThreeSumReturnsValidOutput2() {
+        let array = [0, 0, 0]
+        let expected = [[0, 0, 0]]
+
+        #expect(expected == threeSum(array))
+    }
+
+    @Test
+    func testThreeSumReturnsValidOutput3() {
+        let array = [0, 1, 1]
+        let expected: [[Int]] = [[]]
+
+        #expect(expected == threeSum(array))
+    }
+
+    @Test
+    func testThreeSumReturnsValidOutput4() {
+        let nums = [-5, -3, -2, -1, 0, 4, 5]
+        let expected = [
+            [-5, 0, 5],
+            [-3, -2, 5],
+            [-3, -1, 4]
+        ]
+
+        #expect(threeSum(nums) == expected)
+    }
+
 }
