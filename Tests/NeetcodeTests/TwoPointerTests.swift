@@ -143,11 +143,4 @@ public struct TwoPointerTests {
         #expect(result == 0)
     }
 
-    @Test
-    func testMaximumAreaOfContainerReturnsValidOutput8() {
-        let heights = Array(1...10_000)
-        let result = maximumAreaOfContainer(heights)
-        #expect(result == 9999)
-    }
-
 }

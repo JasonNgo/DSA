@@ -22,5 +22,5 @@ import Foundation
  */
 
 public func containsDuplicates(_ nums: [Int]) -> Bool {
-    Set(nums).count == nums.count
+    Set(nums).count != nums.count
 }
