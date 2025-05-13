@@ -68,11 +68,7 @@ import Foundation
 
  while left < right:
     Compute water[i]
-
-
-
  */
-
 
 public func trappingRainWater(_ heights: [Int]) -> Int {
     var result = 0
