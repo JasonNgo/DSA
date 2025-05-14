@@ -24,4 +24,14 @@ public struct StackTests {
         #expect(minStack.getMin() == 1)
     }
 
+    @Test
+    func testEvaluateReversePolishNotationReturnsValidOutput() {
+        let tokens = ["1","2","+","3","*","4","-"]
+
+        let expectedOutput = 5
+        let actualOutput = evaluateReversePolishNotation(tokens)
+
+        #expect(actualOutput == expectedOutput)
+    }
+
 }
