@@ -98,4 +98,22 @@ public struct ArrayHashingTests {
         #expect(actualOutput == expectedOutput)
     }
 
+    @Test
+    func testLongestConsecutiveSubsequenceReturnsValidOutput() {
+        let input = [2,20,4,10,3,4,5]
+        let expectedOutput = 4
+        let actualOutput = longestConsecutiveSubsequence(input)
+
+        #expect(actualOutput == expectedOutput)
+    }
+
+    @Test
+    func testLongestConsecutiveSubsequenceReturnsValidOutput2() {
+        let input = [0,3,2,5,4,6,1,1]
+        let expectedOutput = 7
+        let actualOutput = longestConsecutiveSubsequence(input)
+
+        #expect(actualOutput == expectedOutput)
+    }
+
 }
