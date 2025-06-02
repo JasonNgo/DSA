@@ -5,7 +5,7 @@
 //  Created by Jason Ngo on 2025-05-31.
 //
 
-import TestingCore
+import Core
 import HeapModule
 import Foundation
 
@@ -126,7 +126,7 @@ fileprivate func mergeKListsWithHeap(_ lists: [ListNode?]) -> ListNode? {
 }
 
 fileprivate func _merge(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-    var dummyHead = ListNode(-1)
+    let dummyHead = ListNode(-1)
     var tail: ListNode? = dummyHead
 
     var curr1 = l1

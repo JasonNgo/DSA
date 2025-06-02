@@ -20,7 +20,6 @@ import Foundation
  */
 
 public func searchInRotatedArray(_ nums: [Int], _ target: Int) -> Int {
-    var index = -1
     var left = 0
     var right = nums.count - 1
 
@@ -46,5 +45,5 @@ public func searchInRotatedArray(_ nums: [Int], _ target: Int) -> Int {
         }
     }
 
-    return index
+    return -1
 }

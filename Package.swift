@@ -15,13 +15,12 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-collections", exact: "1.2.0")
     ],
     targets: [
-        .target(name: "TestingCore", dependencies: [
+        .target(name: "Core", dependencies: [
             .product(name: "HeapModule", package: "swift-collections")
         ]),
-        .target(
-            name: "Neetcode", dependencies: [
-                "TestingCore"
-            ]),
+        .target(name: "Fundamentals", dependencies: ["Core"]),
+        .target(name: "Neetcode", dependencies: ["Core"]),
+        .target(name: "TestingCore", dependencies: []),
         .testTarget(
             name: "NeetcodeTests",
             dependencies: ["TestingCore", "Neetcode"]

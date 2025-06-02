@@ -5,6 +5,7 @@
 //  Created by Jason Ngo on 2025-05-30.
 //
 
+import Core
 import Foundation
 
 /*
@@ -72,8 +73,8 @@ public class LRUCache {
     }
 
     public func put(_ key: Int, _ value: Int) {
-        if var node = cache[key] {
-            var updatedNode = node
+        if let node = cache[key] {
+            let updatedNode = node
             updatedNode.val = value
             cache[key] = updatedNode
             remove(updatedNode)

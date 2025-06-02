@@ -37,7 +37,6 @@ public func checkInclusion(_ s1: String, _ s2: String) -> Bool {
         string1Freq[c, default: 0] += 1
     }
 
-    var left = s2.startIndex
     var windowFreq: [Character: Int] = [:]
 
     for right in 0..<s2.count {

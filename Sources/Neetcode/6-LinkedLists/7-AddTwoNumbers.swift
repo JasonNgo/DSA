@@ -30,6 +30,8 @@ import Foundation
  Output: [8,9,9,9,0,0,0,1]
  */
 
+import Core
+
 public func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     // edge case: if one of the lists is empty return the non-empty list
     guard let l1 else {
@@ -42,7 +44,7 @@ public func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     }
 
     // use a dummy head to make adding to the list straightforward
-    var dummyHead = ListNode(-1)
+    let dummyHead = ListNode(-1)
     var tail: ListNode? = dummyHead
     var curr1: ListNode? = l1
     var curr2: ListNode? = l2

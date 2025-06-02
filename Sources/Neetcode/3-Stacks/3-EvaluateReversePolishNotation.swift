@@ -19,10 +19,7 @@ import Foundation
  */
 
 public func evaluateReversePolishNotation(_ tokens: [String]) -> Int {
-    let operationTypes = Set(["+", "-", "*", "/"])
-
     var stack = [String]()
-    var total = 0
 
     for token in tokens {
         switch token {

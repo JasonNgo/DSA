@@ -22,6 +22,8 @@ import Foundation
  You may not modify the values in the list's nodes, but instead you must reorder the nodes themselves.
  */
 
+import Core
+
 public func reorderList(_ head: ListNode?) {
     if head == nil {
         return

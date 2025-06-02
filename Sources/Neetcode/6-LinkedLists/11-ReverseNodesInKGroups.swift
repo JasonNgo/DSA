@@ -5,6 +5,7 @@
 //  Created by Jason Ngo on 2025-05-31.
 //
 
+import Core
 import Foundation
 
 /*
@@ -22,7 +23,7 @@ public func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
         return head
     }
 
-    var dummyHead = ListNode(-1, head)
+    let dummyHead = ListNode(-1, head)
     var groupPrev: ListNode? = dummyHead
 
     while true {
@@ -34,7 +35,7 @@ public func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
         }
 
         // reverse the group
-        var groupNext = kth?.next
+        let groupNext = kth?.next
         var curr = groupPrev?.next
         var prev = groupNext
         while curr !== groupNext {
@@ -45,7 +46,7 @@ public func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
         }
 
         // fix the bindings after
-        var groupTmp = groupPrev?.next
+        let groupTmp = groupPrev?.next
         groupPrev?.next = kth
         groupPrev = groupTmp
     }

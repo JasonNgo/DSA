@@ -5,6 +5,7 @@
 //  Created by Jason Ngo on 2025-05-29.
 //
 
+import Core
 import Foundation
 
 /*
@@ -16,7 +17,7 @@ import Foundation
  */
 
 public func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
-    var dummyHead = ListNode(-1)
+    let dummyHead = ListNode(-1)
     var tail: ListNode? = dummyHead
     var current1: ListNode? = list1
     var current2: ListNode? = list2
@@ -33,13 +34,13 @@ public func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         tail = tail?.next
     }
 
-    while let current1Val = current1?.val {
+    while let _ = current1?.val {
         tail?.next = current1
         current1 = current1?.next
         tail = tail?.next
     }
 
-    while let current2Val = current2?.val {
+    while let _ = current2?.val {
         tail?.next = current2
         current1 = current2?.next
         tail = tail?.next
